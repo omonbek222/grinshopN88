@@ -21,7 +21,6 @@ const LoginModal = ({ isOpen, onClose }: Props) => {
           &times;
         </button>
 
-        {/* Tabs */}
         <div className="flex justify-center gap-6 mb-6 border-b pb-2">
           <button
             className={`text-lg font-semibold ${activeTab === "login" ? "text-green-600" : "text-gray-600"}`}
@@ -37,7 +36,6 @@ const LoginModal = ({ isOpen, onClose }: Props) => {
           </button>
         </div>
 
-        {/* Form */}
         <form className="space-y-4">
           <label className="block text-sm text-gray-600">
             Enter your username and password to {activeTab}.
@@ -62,10 +60,8 @@ const LoginModal = ({ isOpen, onClose }: Props) => {
           </button>
         </form>
 
-        {/* Divider */}
         <div className="text-center text-sm text-gray-500 my-4">Or login with</div>
 
-        {/* Social Logins */}
         <div className="flex flex-col gap-3">
           <button className="flex items-center gap-3 border p-2 rounded justify-center">
             <FaFacebook className="text-blue-600" /> Login with Facebook
