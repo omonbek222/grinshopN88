@@ -1,13 +1,18 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import LoginModal from "./components/LoginModal";
 
-const App = () => {
+function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div>
-      <Navbar />
+    <>
+      <Navbar onLoginClick={() => setIsModalOpen(true)} />
       <Hero />
-    </div>
+      <LoginModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
-};
+}
 
 export default App;
